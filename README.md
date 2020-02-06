@@ -15,7 +15,10 @@ _Create your very own web scraper and crawler using Go and [Colly](https://go-co
 
 ```bash
 📂 makescraper
+├── LICENSE
 ├── README.md
+├── go.mod
+├── go.sum
 └── scrape.go
 ```
 
