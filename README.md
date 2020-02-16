@@ -22,7 +22,7 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
 ### 📚 Table of Contents
 
 1. [Project Structure](#project-structure)
-2. [Getting Started](#getting-started)
+2. [Installation](#installation)
 3. [Deliverables](#deliverables)
 4. [Resources](#resources)
 
