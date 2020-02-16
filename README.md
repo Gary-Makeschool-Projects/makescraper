@@ -1,8 +1,23 @@
-# 🕷 makescraper
+<p align="center">
+  <!-- <a href="https://github.com/adamfaliq42/jivesearch/edit/master/README.md">
+    <img alt="jive-search logo" src="frontend/static/icons/logo.png"> 
+  </a>-->
+</p>
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/YOUR_GITHUB_USERNAME/makescraper)](https://goreportcard.com/report/github.com/YOUR_GITHUB_USERNAME/makescraper)
+<br>
 
-_Create your very own web scraper and crawler using Go and [Colly](https://go-colly.org)!_
+<p align="center">
+makescraper is a simple API for scraping website data. Just pass in the url and keywords you are looking for and have the scraper return you json.
+</p>
+
+<br>
+<p align="center">
+   <a href="https://goreportcard.com/badge/github.com/imthaghost/makescraper"><img src="https://goreportcard.com/badge/github.com/imthaghost/makescraper"></a>
+   <a href="#">
+    <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"alt="gitmoji-changelog">
+  </a>
+</p>
+<br>
 
 ### 📚 Table of Contents
 
@@ -17,68 +32,66 @@ _Create your very own web scraper and crawler using Go and [Colly](https://go-co
 📂 makescraper
 ├── LICENSE
 ├── README.md
+├── config
+├── controllers
+│   └── url.go
+├── crawler
+│   └── scrape.go
 ├── go.mod
 ├── go.sum
-└── scrape.go
+├── json
+├── models
+│   └── site.go
+├── parser
+└── server.go
 ```
 
-## Getting Started
+## 🚀 Installation
 
-1. Visit [github.com/new](https://github.com/new) and create a new repository named `makescraper`.
-2. Run each command line-by-line in your terminal to set up the project:
+### Homebrew
 
-    ```bash
-    $ git clone git@github.com:Make-School-Labs/makescraper.git
-    $ cd makescraper
-    $ git remote rm origin
-    $ git remote add origin git@github.com:YOUR_GITHUB_USERNAME/makescraper.git
-    $ go mod download
-    ```
+```bash
 
-3. Open `README.md` in your editor and replace all instances of `YOUR_GITHUB_USERNAME` with your GitHub username to enable the Go Report Card badge.
+```
 
-## Deliverables
-
-_Complete each task in the order they appear. Use [GitHub Task List](https://help.github.com/en/github/managing-your-work-on-github/about-task-lists) syntax to update the task list._
-
-### Requirements
+### Deliverables
 
 #### Scraping
 
-- [ ] **IMPORTANT**: Complete the Web Scraper Workflow worksheet distributed in class.
-- [ ] Create a `struct` to store your data.
-- [ ] Refactor the `c.OnHTML` callback on line `16` to use the selector(s) you tested while completing the worksheet.
-- [ ] Print the data you scraped to `stdout`.
+-   [x] **IMPORTANT**: Complete the Web Scraper Workflow worksheet distributed in class.
+-   [x] Create a `struct` to store your data.
+-   [x] Refactor the `c.OnHTML` callback on line `16` to use the selector(s) you tested while completing the worksheet.
+-   [x] Print the data you scraped to `stdout`.
 
 ##### Stretch Challenges
 
-- [ ] Add more fields to your `struct`. Extract multiple data points from the website. Print them to `stdout` in a readable format.
+-   [ ] Add more fields to your `struct`. Extract multiple data points from the website. Print them to `stdout` in a readable format.
 
 #### Serializing & Saving
 
-- [ ] Serialize the `struct` you created to JSON. Print the JSON to `stdout` to validate it.
-- [ ] Write scraped data to a file named `output.json`.
-- [ ] **Add, commit, and push to GitHub**.
+-   [x] Serialize the `struct` you created to JSON. Print the JSON to `stdout` to validate it.
+-   [x] Write scraped data to a file named `output.json`.
+-   [x] **Add, commit, and push to GitHub**.
 
 ##### Stretch Challenges
 
-- [ ] TBA 02/10!
+-   [ ] TBA 02/10!
 
 ## Resources
 
 ### Lesson Plans
 
-- [**BEW 2.5** - Scraping the Web](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Languages/#/Lessons/WebScraping.md): Concepts and examples covered in class related to web scraping and crawling.
+-   [**BEW 2.5** - Scraping the Web](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Languages/#/Lessons/WebScraping.md): Concepts and examples covered in class related to web scraping and crawling.
 
 ### Example Code
 
 #### Scraping
 
-- [**Colly** - Docs](http://go-colly.org/docs/): Check out the sidebar for 20+ examples!
-- [**Ali Shalabi** - Syntax-Helper](https://github.com/alishalabi/syntax-helper): Command line interface to help generate proper code syntax, pulled from the Golang documentation.
+-   [**Colly** - Docs](http://go-colly.org/docs/): Check out the sidebar for 20+ examples!
+-   [**Ali Shalabi** - Syntax-Helper](https://github.com/alishalabi/syntax-helper): Command line interface to help generate proper code syntax, pulled from the Golang documentation.
 
 #### Serializing & Saving
 
-- [JSON to Struct](https://mholt.github.io/json-to-go/): Paste any JSON data and convert it into a Go structure that will support storing that data.
-- [GoByExample - JSON](https://gobyexample.com/json): Covers Go's built-in support for JSON encoding and decoding to and from built-in and custom data types (structs).
-- [GoByExample - Writing Files](https://gobyexample.com/writing-files): Covers creating new files and writing to them.
+-   [JSON to Struct](https://mholt.github.io/json-to-go/): Paste any JSON data and convert it into a Go structure that will support storing that data.
+-   [GoByExample - JSON](https://gobyexample.com/json): Covers Go's built-in support for JSON encoding and decoding to and from built-in and custom data types (structs).
+-   [GoByExample - Writing Files](https://gobyexample.com/writing-files): Covers creating new files and writing to them.

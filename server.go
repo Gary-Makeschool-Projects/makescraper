@@ -22,7 +22,8 @@ func main() {
 	}))
 	// Route => handler
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!\n")
+		description := "Simple website scraping API"
+		return c.String(http.StatusOK, description)
 	})
 	e.POST("/scrape", controllers.CreateURL)
 	// Server
