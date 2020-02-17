@@ -32,11 +32,13 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
 📂 makescraper
 ├── LICENSE
 ├── README.md
+├── go.mod
+├── go.sum
+├── server.go
 ├── assets
 │   ├── css
 │   │   └── styles.css
 │   ├── fonts
-│   │
 │   ├── img
 │   │   └── thumbnail.jpg
 │   ├── js
@@ -51,14 +53,11 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
 │   └── media
 │       ├── form.png
 │       └── logo.jpg
-├── go.mod
-├── go.sum
 ├── json
 │   └── serilization.go
 ├── models
 │   └── site.go
 ├── parser
-├── server.go
 └── templates
     └── index.html
 ```
