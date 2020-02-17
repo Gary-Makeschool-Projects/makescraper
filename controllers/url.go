@@ -29,7 +29,7 @@ func CreateURL(c echo.Context) (err error) {
 	// Continue to use the Body, like Binding it to a struct:
 	u := new(Site)
 	// lets start crawling
-	r := crawler.Crawl(u.URL)
+	r := crawler.Crawl(u.URL, u.Keywords)
 	er := c.Bind(r)
 	fmt.Print(er)
 	fmt.Print(u)
