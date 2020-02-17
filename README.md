@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="#">
+  <!-- <a href="#">
     <img alt="jive-search logo" src="https://github.com/imthaghost/makescraper/blob/master/docs/media/logo.jpg"> 
-  </a>
+  </a> -->
 </p>
 
 <br>
@@ -18,8 +18,6 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
   </a>
 </p>
 <br>
-
-![form](docs/media/form.png)
 
 ### 📚 Table of Contents
 
