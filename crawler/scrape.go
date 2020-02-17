@@ -7,7 +7,7 @@ import (
 )
 
 // Crawl instantiates a new colly collector on specified url
-func Crawl(string url) {
+func Crawl(url string) {
 	// Instantiate default collector
 	c := colly.NewCollector()
 
