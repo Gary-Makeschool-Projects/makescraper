@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img alt="jive-search logo" src="docs/media/logo.png"> 
+    <img alt="jive-search logo" src="https://github.com/imthaghost/makescraper/blob/master/docs/media/logo.jpg"> 
   </a>
 </p>
 
@@ -34,18 +34,35 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
 📂 makescraper
 ├── LICENSE
 ├── README.md
+├── assets
+│   ├── css
+│   │   └── styles.css
+│   ├── fonts
+│   │
+│   ├── img
+│   │   └── thumbnail.jpg
+│   ├── js
+│   │   └── scripts.min.js
+│   └── svg
 ├── config
 ├── controllers
 │   └── url.go
 ├── crawler
 │   └── scrape.go
+├── docs
+│   └── media
+│       ├── form.png
+│       └── logo.jpg
 ├── go.mod
 ├── go.sum
 ├── json
+│   └── serilization.go
 ├── models
 │   └── site.go
 ├── parser
-└── server.go
+├── server.go
+└── templates
+    └── index.html
 ```
 
 ## 🚀 Installation
