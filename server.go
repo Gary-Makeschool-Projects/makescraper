@@ -11,7 +11,7 @@ import (
 func main() {
 	e := echo.New()
 	// Middleware
-	e.Use(middleware.Logger())
+	//e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 	//CORS
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
@@ -22,7 +22,7 @@ func main() {
 	// Static file handler
 	e.Static("/", "assets")
 	// html handler
-	e.File("/", "templates/index.html")
+	e.File("/", "ui/index.html")
 	// e.GET("/", func(c echo.Context) error {
 	// 	description := "Simple website scraping API"
 	// 	return c.String(http.StatusOK, description)

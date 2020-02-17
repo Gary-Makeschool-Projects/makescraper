@@ -7,11 +7,14 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
+
+	"github.com/imthaghost/makescraper/crawler"
 )
 
 //Site is data about the site we will scrape
 type Site struct {
-	URL string `json:"url" form:"url" query:"url"`
+	URL      string `json:"url" form:"url" query:"url"`
+	Keywords string `json:"keywords" form:"keywords" query:"keywords"`
 }
 
 //CreateURL mimics creating a user
@@ -25,8 +28,10 @@ func CreateURL(c echo.Context) (err error) {
 	c.Request().Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
 	// Continue to use the Body, like Binding it to a struct:
 	u := new(Site)
-	er := c.Bind(u)
-	fmt.Print(u)
+	// lets start crawling
+	r := crawler.Crawl(u.URL)
+	er := c.Bind(r)
 	fmt.Print(er)
-	return c.JSON(http.StatusCreated, u)
+	fmt.Print(u)
+	return c.JSON(http.StatusCreated, r)
 }

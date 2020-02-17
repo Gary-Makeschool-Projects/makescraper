@@ -18,14 +18,13 @@
         <a href="#" class="logo"><img src="/svg/logo.svg" alt="logo" /></a>
         <h2 class="modal-title first-name" id="title-name"></h2>
         <p>Generating your data</p>
-        <a href="#" class="button">Back home</a>
+        <a href="/" class="button">Back home</a>
       </div>
       <div class="form-content">
         <a href="#" class="logo"><img src="/svg/logo.svg" alt="logo" /></a>
         <h2 class="modal-title">Start Scraping</h2>
         <p class="modal-subtitle">Input the URL you want to scrape and some keywords for context</p>
-        <form class='form' name='DiGift' action="#" method='POST'><input type='hidden' name='form-name'
-            value='DiGift' />
+        <form class='form' name='form' action="/scrape" method='POST'><input type='hidden' name='form-name' />
           <div class="group">
             <input type="text" id="firstName" name="url" placeholder="&nbsp;" autocomplete="on" required>
             <label for="first-name">Url</label>
@@ -107,7 +106,7 @@
         $('body').toggleClass('no-scroll');
       });
 
-      // Reserve username form
+      // Reserve url form
       $(".form").submit(function (e) {
         e.preventDefault();
         var $form = $(this);
@@ -117,11 +116,11 @@
         });
       });
 
-      // Save user's first name
+      // Save url
       $(".form").submit(function (e) {
         e.preventDefault();
         var value = $("#firstName").val();
-        $('.first-name').text("Thank you," + " " + value + "!");
+        $('.first-name').text("Scraping" + " " + value + "!");
       });
 
       // Feather icons
