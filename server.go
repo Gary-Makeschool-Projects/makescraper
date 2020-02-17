@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	livereload "github.com/mattn/echo-livereload"
 
 	"github.com/imthaghost/makescraper/controllers"
 )
@@ -26,7 +27,9 @@ func main() {
 	// 	description := "Simple website scraping API"
 	// 	return c.String(http.StatusOK, description)
 	// })
+
 	e.POST("/scrape", controllers.CreateURL)
+	e.Use(livereload.LiveReload())
 	// Server
 	e.Logger.Fatal(e.Start(":8000"))
 }

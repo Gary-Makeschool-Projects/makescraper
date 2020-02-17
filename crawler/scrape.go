@@ -25,5 +25,5 @@ func Crawl(url string) {
 	})
 
 	// Start scraping on https://hackerspaces.org
-	c.Visit("")
+	c.Visit(url)
 }
