@@ -1,7 +1,7 @@
 <p align="center">
-  <!-- <a href="https://github.com/adamfaliq42/jivesearch/edit/master/README.md">
-    <img alt="jive-search logo" src="frontend/static/icons/logo.png"> 
-  </a>-->
+  <a href="#">
+    <img alt="jive-search logo" src="docs/media/logo.png"> 
+  </a>
 </p>
 
 <br>
@@ -18,6 +18,8 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
   </a>
 </p>
 <br>
+
+![form](docs/media/form.png)
 
 ### 📚 Table of Contents
 

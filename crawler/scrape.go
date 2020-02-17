@@ -6,18 +6,17 @@ import (
 	"github.com/gocolly/colly"
 )
 
-// main() contains code adapted from example found in Colly's docs:
-// http://go-colly.org/docs/examples/basic/
-func main() {
+// Crawl instantiates a new colly collector on specified url
+func Crawl(string url) {
 	// Instantiate default collector
 	c := colly.NewCollector()
 
 	// On every a element which has href attribute call callback
 	c.OnHTML("a[href]", func(e *colly.HTMLElement) {
-                link := e.Attr("href")
+		link := e.Attr("href")
 
 		// Print link
-                fmt.Printf("Link found: %q -> %s\n", e.Text, link)
+		fmt.Printf("Link found: %q -> %s\n", e.Text, link)
 	})
 
 	// Before making a request print "Visiting ..."
@@ -26,5 +25,5 @@ func main() {
 	})
 
 	// Start scraping on https://hackerspaces.org
-	c.Visit("https://hackerspaces.org/")
+	c.Visit("")
 }

@@ -1,8 +1,6 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/labstack/echo"
 	//"github.com/labstack/echo/engine/standard"
 	"github.com/labstack/echo/middleware"
@@ -21,10 +19,14 @@ func main() {
 		AllowMethods: []string{echo.GET, echo.HEAD, echo.PUT, echo.PATCH, echo.POST, echo.DELETE},
 	}))
 	// Route => handler
-	e.GET("/", func(c echo.Context) error {
-		description := "Simple website scraping API"
-		return c.String(http.StatusOK, description)
-	})
+	// Static file handler
+	e.Static("/", "assets")
+	// html handler
+	e.File("/", "templates/index.html")
+	// e.GET("/", func(c echo.Context) error {
+	// 	description := "Simple website scraping API"
+	// 	return c.String(http.StatusOK, description)
+	// })
 	e.POST("/scrape", controllers.CreateURL)
 	// Server
 	e.Logger.Fatal(e.Start(":8000"))
