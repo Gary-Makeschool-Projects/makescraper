@@ -13,6 +13,7 @@ import (
 
 //Site is data about the site we will scrape
 type Site struct {
+	// todo make into a model
 	URL      string `json:"url" form:"url" query:"url"`
 	Keywords string `json:"keywords" form:"keywords" query:"keywords"`
 }

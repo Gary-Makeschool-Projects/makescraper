@@ -12,10 +12,10 @@ makescraper is a simple API for scraping website data. Just pass in the url and 
 
 <br>
 <p align="center">
-   <a href="https://goreportcard.com/badge/github.com/imthaghost/makescraper"><img src="https://goreportcard.com/badge/github.com/imthaghost/makescraper"></a>
    <a href="#">
     <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"alt="gitmoji-changelog">
   </a>
+  <a href="https://goreportcard.com/badge/github.com/imthaghost/makescraper"><img src="https://goreportcard.com/badge/github.com/imthaghost/makescraper"></a>
 </p>
 <br>
 
