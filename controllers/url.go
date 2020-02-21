@@ -29,10 +29,15 @@ func CreateURL(c echo.Context) (err error) {
 	c.Request().Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
 	// Continue to use the Body, like Binding it to a struct:
 	u := new(Site)
-	// lets start crawling
+	// bind the model with the context body
+	er := c.Bind(u)
+	// panic!
+	if er != nil {
+		panic(err)
+	}
+	// crawl with the passed in data
 	r := crawler.Crawl(u.URL, u.Keywords)
-	er := c.Bind(r)
-	fmt.Print(er)
-	fmt.Print(u)
+	fmt.Print(r)
+	// return the links
 	return c.JSON(http.StatusCreated, r)
 }
